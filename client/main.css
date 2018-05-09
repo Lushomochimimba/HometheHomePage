@@ -1,0 +1,14 @@
+/* CSS declarations go here */
+body{
+    background-color: rgb(219, 212, 212);
+    padding: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.materialboxed{
+    border-radius: 100px
+}
+.PD{
+    column-count: 3;
+    column-rule-style: solid;
+    column-rule-width: thick;
+  }
