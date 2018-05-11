@@ -1,14 +1,41 @@
 /* CSS declarations go here */
+ /* @import url('https://fonts.googleapis.com/css?family=Pacifico'); */
+  @import url('https://fonts.googleapis.com/css?family=Lobster');
 body{
     background-color: rgb(219, 212, 212);
-    padding: 5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 .materialboxed{
     border-radius: 100px
 }
-.PD{
-    column-count: 3;
-    column-rule-style: solid;
-    column-rule-width: thick;
-  }
+/* css all rows home page*/
+/* #R1{
+    background-image: url('public/image')
+}
+#R2{
+  background-color: red
+}
+#R3{
+    background-color: red 
+}
+nav {
+    color: #fff;
+    background-color:green
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+} */
+.parallax-container {
+  height: 400px;
+}
+p{
+    color:red;
+}
+/* navbar */
+.light-blue {
+    background-color: rgba(25,25,25,0.5) !important;
+}
+/* footer */
+.orange {
+    background-color:black !important;
+}
