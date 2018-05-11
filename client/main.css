@@ -28,6 +28,11 @@ nav {
 .parallax-container {
   height: 400px;
 }
+.up{
+    border: none;
+    border-left: 1px solid;
+    height: 240px;
+}
 p{
     color:red;
 }
@@ -38,4 +43,9 @@ p{
 /* footer */
 .orange {
     background-color:black !important;
+}
+.row .col.l6 {
+    width: 50%;
+    left: auto;
+    right: auto;
 }
