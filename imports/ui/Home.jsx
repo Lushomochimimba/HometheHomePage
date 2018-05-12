@@ -55,35 +55,30 @@ export default class Home extends Component {
      <div className="col m4 s12">
        <div className="icon-block">
          <h2 className="center light-blue-text">
-           <i className="material-icons">flash_on</i>  
-         </h2>
-         <h5 className="center">Speeds up development</h5>
+         <i className="fa fa-crown fa-4x" style={{foregroundcolor:"black"}}></i>         </h2>
+         <h5 className="center">Our Goal</h5>
          <p className="light">
-           We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-         </p>
+         Our goal is to connect you with local (and remote) people who need your skills, giving them access to quality talent and giving you hands-on experience and a pay-cheque of course! We'll be operating initially in Zambia.         </p>
        </div>
        
      </div>
      <div className="col m4 s12">
        <div className="icon-block">
          <h2 className="center light-blue-text">
-           <i className="material-icons">group</i>  
-         </h2>
-         <h5 className="center">User Experience Focused</h5>
+         <i className="fa fa-child"></i>        </h2>
+         <h5 className="center">Who is 99 Jobs for?</h5>
          <p className="light">
-           By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
-         </p>
+         For graphic designers, web designers, developers, teachers, photographers, artists, writers, accountants, videographers, choreographers, small business owners, students, employees, employers, Anybody you can think of.         </p>
        </div> 
      </div>
      <div className="col m4 s12">
        <div className="icon-block">
          <h2 className="center light-blue-text">
-           <i className="material-icons">settings</i>  
+         <i className="fa fa-question-circle"></i>         
          </h2>
-         <h5 className="center">Easy to work with</h5>
+         <h5 className="center">Why 99 Jobs</h5>
          <p className="light">
-           We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
-         </p>
+         Do you feel stuck and unhappy with your current job? Are you having difficulties with finding a service provider? Or maybe your issue is the high cost of doing business. We at 99 Jobs are building you a new Freelance marketplace platform that promises to be Awesome!!!         </p>
        </div> 
      </div>
    </div>
@@ -93,82 +88,41 @@ export default class Home extends Component {
   <div className="parallax"><img src="https://images.unsplash.com/photo-1463780324318-d1a8ddc05a11?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="/>
   </div>
   
-  <div className="container white-text">
-    <div className="row">
-      <div className="col s12">
-        <h5>A modern responsive front-end framework based on Material Design</h5>
-      </div>
-    </div>
-  </div>
+ 
 </div>
 
-<div className="container center-align">
- <div className="section">
-    <div className="row">
-    <div className="col s12">
-      <h4>Contact Us</h4>
-      <p className="light left-align">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-      </p>
-    </div>      
-  </div>
-  </div>
-</div>
-
-<div className="parallax-container center valign-wrapper">
-  <div className="parallax"><img src="/images/profile.jpeg"/>
-  </div>
-  
-  <div className="container white-text">
-    <div className="row">
-      <div className="col s12">
-        <h5>A modern responsive front-end framework based on Material Design</h5>
-      </div>
-    </div>
-  </div>
-</div>
 
 {/* <!-- Footer --> */}
-<footer className="page-footer orange">
+<footer className="page-footer orange col s6">
   <div className="container">
     <div className="row">
       <div className="col l6 s12">
-        <h5 className="white-text">Company Bio</h5>
+        <h5 className="white-text">Project Bio</h5>
+        <hr/>
+        
         <p className="grey-text text-lighten-4">
-          We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+          We are a team of upcoming developers from Hackers Guild working on this project like it's our full time job. Any amount of your support will help continue on the development of this project and we greatly appreciate.
         </p>
       </div>
       <div className="col l3 s12">
-        <h5 className="white-text">Settings</h5>
-        <ul>
-          <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 4</a>
-          </li>
-        </ul>
+        <h5 className="white-text"></h5>
+        <hr className="up"/>
       </div>
       <div className="col l3 s12">
-        <h5 className="white-text">Connect</h5>
+        <h5 className="white-text">Owners</h5>
+        <hr/>
         <ul>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 1</a>
+            <a href="#!" className="grey-text text-lighten-3">Lushomo Chimimba  <i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 2</a>
+            <a href="#!" className="grey-text text-lighten-3">Perseverance  <i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 3</a>
+            <a href="#!" className="grey-text text-lighten-3">Joseph Yumba  <i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Link 4</a>
+            <a href="#!" className="grey-text text-lighten-3">Sithembinkhosi Siwo  <i className="fa fa-github"></i></a>
           </li>
         </ul>
       </div>
