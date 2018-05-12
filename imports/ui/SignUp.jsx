@@ -4,11 +4,30 @@ import route from '/imports/routing/router.js';
 
 export default class SignUp extends Component{
 
+  constructor(props){
+    super(props);
+    this.state={value:''
+    ,first_name:'' , last_name:'', email:'', password:''};
+ }
+ handleChange(event) {
+
+     this.setState({value: event.target.value});
+   }
+ onChange(state,event){
+   let val = {};
+  val[state] = event.target.value;
+  this.setState(val)
+  }
+handleSubmit(event) {
+ event.preventdefault();
+
+  }
+
 
     render(){
         return(
             <div>
-                <h1>Sign Up</h1>
+                <h1>Sign Up   </h1>
             <div className="SignUp">
     <form className="col s12">
       <div className="row">
