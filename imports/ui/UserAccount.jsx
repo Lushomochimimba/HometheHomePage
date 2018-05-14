@@ -7,40 +7,33 @@ import loadmaterialize from './materialize.js' ;
 
 
 export default class UserAccount extends Component{
+    logOut=(e)=>{
+    e.preventDefault();
+    Meteor.logout();
+    route.go('/login')
+  }
    
       render() {
         return <div>    
-             <div class="row">
-              <div class="col s3">
+             <div className="row">
+              <div className="col s3">
               <img src={this.props.url} />
 
               <input type="file"/>
                <img className="materialboxed" width="200" height="200" src="/images/profile.jpeg"/>
               </div>
-            <div class="col s5">
+            <div className="col s5">
              <span>
                  <h4>Emeritus E.</h4>
                  <p>Plumber</p>
-                 <p><i class="fa fa-phone" aria-hidden="true"></i> +72865837678379</p>
-                 <p><i class="fa fa-envelope" aria-hidden="true"></i> example@gmail.com</p>
+                 <p><i className="fa fa-phone" aria-hidden="true"></i> +72865837678379</p>
+                 <p><i className="fa fa-envelope" aria-hidden="true"></i> example@gmail.com</p>
              </span>
             </div>
             </div>
-            
-
-{/* expertise and personal details */}
-             <div class="row">
- 
-<div class="col s6">
-<h4>Expertise</h4>
-</div>
-<div class="col s6">
-<h4>Personal Details</h4>
-
-</div>
-</div>
-
-
+            <button type="Primary" className="btn btn-primary" onClick={this.logOut}>
+        Logout
+        </button>
            </div>
                  
 

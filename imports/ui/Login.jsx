@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import route from '/imports/routing/router.js';
 import {Accounts} from 'meteor/accounts-base';
 import Navbar from '/imports/ui/components/navbar.jsx';
+import UserAccount from '/imports/ui/UserAccount.jsx'
 
 
 
@@ -18,9 +19,8 @@ export default class Login extends Component{
     const email = e.target.email.value;
     const password = e.target.password.value;
     Meteor.loginWithPassword(email,password, err=>{
-      err? console.log(err.reason): console.log('Logged in succesully');
+      err? console.log(err.reason): route.go('/useraccount');
     })
-    meteor.loginWithPassword
   }
   
   
@@ -46,7 +46,7 @@ export default class Login extends Component{
          <div className=" col s4">
          </div>
           <div className="input-field col s4">
-            <input name="password2" type="password" className="validate"/>
+            <input name="password" type="password" className="validate"/>
              <label type="password">Password</label>
           </div>
         </div>
