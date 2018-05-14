@@ -24,3 +24,5 @@ materialize:materialize
 react-meteor-data
 fortawesome:fontawesome
 meteortoys:allthings
+accounts-ui
+accounts-password
