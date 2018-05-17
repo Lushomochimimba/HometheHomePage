@@ -16,7 +16,7 @@ body{
   background-color: red
 }
 #R3{
-    background-color: red 
+    background-color: red;
 }
 nav {
     color: #fff;
@@ -52,4 +52,3 @@ p{
 .cnt{
     text-align:center;
 }
-
