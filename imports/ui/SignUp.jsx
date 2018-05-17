@@ -1,21 +1,25 @@
 import React, {Component} from 'react';
 import route from '/imports/routing/router.js';
+import {withTracker} from 'meteor/react-meteor-data';
 import {Accounts} from 'meteor/accounts-base';
 import Navbar from '/imports/ui/components/navbar.jsx';
+import Infoz from '../api/UserInfo/collections.js';
 
 
 
 
 
 
-
-export default class SignUp extends Component{
-
-  
+export class SignUp extends Component{
 constructor(props){
   super(props);
   this.state={
-      error:''
+      error:'',
+      name:"",
+      profession :"",
+      email :"",
+      phonenumber :""
+
   }
 }
 
@@ -46,7 +50,7 @@ getUserData=(e)=>{
       email,
       password,
       profile:{
-          name,
+         name,
           phonenumber,
           profession,
           location,
@@ -57,10 +61,46 @@ getUserData=(e)=>{
   Accounts.createUser(user, error =>{
       error ? console.log(error.reason) : console.log('Account has been successful');
   })
+  const currentUserId = Meteor.userId();
+  const info  = {
+          name: this.state.name,
+          profession : this.state.profession,
+          email : this.state.email,
+          phonenumber : this.state.phonenumber,
+          // createdBy:currentUserId,
+      }
+      Meteor.call('infoz.create',info,(err,res)=>{
+        console.log(res)
+        if(res){
+          const email = Meteor.user().emails[0].address
+          route.go('/useraccount?email='+email)
+        }else{
+          console.log('failed to insert data in info')
+        }
 
-
+      });
 }
 
+handleNameChange=(e)=>{
+  this.setState({
+    name:e.target.value
+  })
+}
+handleProfessionChange=(e)=>{
+  this.setState({
+    profession:e.target.value
+  })
+}
+handleEmailChange=(e)=>{
+  this.setState({
+    email:e.target.value
+  })
+}
+handlePhonenumberChange=(e)=>{
+  this.setState({
+    phonenumber:e.target.value
+  })
+}
     render(){
         return(
           <div >
@@ -72,24 +112,16 @@ getUserData=(e)=>{
                <div className=" col s4">
                </div>
                 <div className="input-field col s4">
-                  <input placeholder="Placeholder" name="first_name" type="text" className="validate"/>
-                   <label type="first_name">First Name</label>
+                  <input placeholder="Placeholder" name="name" type="text" onChange={this.handleNameChange} className="validate"/>
+                   <label type="text">Names</label>
                 </div>
               </div>
               <div className="row">
                <div className=" col s4">
                </div>
                 <div className="input-field col s4">
-                  <input name="last_name" type="text" className="validate"/>
-                   <label type="last_name">Last Name</label>
-                </div>
-              </div>
-              <div className="row">
-               <div className=" col s4">
-               </div>
-                <div className="input-field col s4">
-                  <input name="email" type="email" className="validate"/>
-                   <label type="email">Email</label>
+                  <input name="email" type="email" onChange={this.handleEmailChange} className="validate"/>
+                   <label type="text">Email</label>
                 </div>
               </div>
               <div className="row">
@@ -112,15 +144,15 @@ getUserData=(e)=>{
                <div className=" col s4">
                </div>
                 <div className="input-field col s4">
-                  <input name="phonenumber" type="number" className="validate"/>
-                   <label type="email">Phone Number</label>
+                  <input name="phonenumber" type="number" onChange={this.handlePhonenumberChange} className="validate"/>
+                   <label type="number">Phone Number</label>
                 </div>
               </div>
               <div className="row">
                <div className=" col s4">
                </div>
                <div className="input-field col s4">
-                  <input name="profession" type="text" className="validate"/>
+                  <input name="profession" type="text" onChange={this.handleProfessionChange} className="validate"/>
                    <label type="text">Profession</label>
                 </div>
               </div>
@@ -132,7 +164,7 @@ getUserData=(e)=>{
                    <label type="text">Location</label>
                 </div>
               </div>
-              <button type="Primary" className="btn btn-primary cnt">Sign Up</button>
+              <button type="Primary" className="btn btn-primary cnt"><a href="/useraccount"></a>Sign Up</button>
              </form>              
               <p>Already have an account?<a href="/login">Sign In</a></p>
            </div>
@@ -140,3 +172,9 @@ getUserData=(e)=>{
         )
     }
 }
+export default withTracker(() => {
+  Meteor.subscribe('infoz');
+   return {
+       infoz : Infoz.find().fetch(),
+   };
+})(SignUp);

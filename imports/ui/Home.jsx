@@ -4,6 +4,7 @@ import route from '/imports/routing/router.js';
 import {withTracker} from 'meteor/react-meteor-data';
 import Navbar from '/imports/ui/components/navbar.jsx';
 import Footer from '/imports/ui/components/footer.jsx';
+import initailize from './materialize.js'
 
 
 
@@ -11,31 +12,52 @@ import Footer from '/imports/ui/components/footer.jsx';
 
 export default class Home extends Component {
 
-  render() {
-    return (
-      <div>
 
-        <Navbar/>
-{/* <!-- Content --> */}
-<div className="parallax-container center valign-wrapper">
-  <div className="container">
-    <div className="row">
-      <div className="col s12 white-text">
-        <h2 className="teal-text teal-text lighten-2">work for your skill</h2>
-        <p>99JOBS , getting clients and the service providers together!</p>
-        <a className="waves-effect waves-light btn-large teal lighten-2">Get Help</a>
+// method initailizing parallax
+  componentDidMount(){
+    initailize();
+  }
+
+
+  render() {
+   
+    return (
+<div>
+
+{/* navigation bar */}
+  <Navbar/>
+
+{/* head content */}
+  <div className="parallax-container center valign-wrapper" id="Row1">
+    <div className="container">
+      <div className="row">
+        <div className="col s12 white-text">
+
+          <h3 id="Head-text">building client and service provider relationships</h3>
+    <div className="row center-align">
+            <div className="col m4 s12">  
+             <a className="waves-effect waves-light btn-large right-align" id="Head-Button">Hire    .</a>
+           </div>
+           <div className="col m4 s12"> 
+           <a className="waves-effect waves-light btn-large left-align" id="Head-Button">Advertise your skills</a>
+           </div>
+      </div>       
+        </div>
       </div>
     </div>
+{/* parallaxed image */}
+  <div className="parallax">
+    <img src="/images/work.jpg" alt="image should load"/>
   </div>
-  
-  {/* <div className="parallax"> */}
-    {/* <img src="/images/profile.jpeg"/> */}
-  {/* </div> */}
 
 </div>
 
-<div className="container">
-  <div className="row">
+<div className="row" id="Row2">
+  <div className="col">
+  <div className="container">
+  <h4 className="center ">About 99Jobs</h4>
+  <hr/>
+{/* first paragraph */}
      <div className="col m4 s12">
        <div className="icon-block">
          <h2 className="center light-blue-text">
@@ -43,39 +65,52 @@ export default class Home extends Component {
          <h5 className="center">Our Goal</h5>
          <p className="light">
          Our goal is to connect you with local (and remote) people who need your skills, giving them access to quality talent and giving you hands-on experience and a pay-cheque of course! We'll be operating initially in Zambia.         </p>
-       </div>
-       
+        </div>
      </div>
+{/* second paragraph */}
      <div className="col m4 s12">
        <div className="icon-block">
-         <h2 className="center light-blue-text">
-         <i className="fa fa-child"></i>        </h2>
-         <h5 className="center">Who is 99 Jobs for?</h5>
-         <p className="light">
-         For graphic designers, web designers, developers, teachers, photographers, artists, writers, accountants, videographers, choreographers, small business owners, students, employees, employers, Anybody you can think of.         </p>
+          <h2 className="center light-blue-text">
+              <i className="fa fa-child"></i>      
+          </h2>
+         <h5 className="center"> service providers</h5>
+            <p className="light">
+                99JOBS aims to connect with local people who need your skills.
+                it is our goal to make your skills and talents available for both the zambian and international market.  
+            </p>
        </div> 
      </div>
+     {/* third paragraph */}
+
      <div className="col m4 s12">
        <div className="icon-block">
          <h2 className="center light-blue-text">
          <i className="fa fa-question-circle"></i>         
          </h2>
-         <h5 className="center">Why 99 Jobs</h5>
+         <h5 className="center">clients</h5>
+
          <p className="light">
-         Do you feel stuck and unhappy with your current job? Are you having difficulties with finding a service provider? Or maybe your issue is the high cost of doing business. We at 99 Jobs are building you a new Freelance marketplace platform that promises to be Awesome!!!         </p>
+        99JOBS aims to improve the quality of service you get by providing a wider range of recommended skilled individauls not just from your area but also from across the country. 
+        </p>
        </div> 
      </div>
-   </div>
-</div>
 
-<div className="parallax-container center valign-wrapper">
-  <div className="parallax"><img src="https://images.unsplash.com/photo-1463780324318-d1a8ddc05a11?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="/>
+   </div>
   </div>
-  
- 
+  </div>
+
+{/* parallaxed image */}
+  <div className="parallax-container center valign-wrapper" id="Row3">
+
+    <div className="parallax"><img src="/images/work.jpg"/>
+    </div>
+
+  </div>
+
+{/* footer code */}
+  <Footer/>
+
 </div>
-<Footer/>
-     </div>
     );
   }
 }

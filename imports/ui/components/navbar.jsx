@@ -9,7 +9,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="light-blue">
+        <nav id="Nav">
   <div className="nav-wrapper container">
     <a href="/" className="brand-logo">99JOBS</a>    
     <ul className="right hide-on-med-and-down">

@@ -1,32 +1,12 @@
 /* CSS declarations go here */
- /* @import url('https://fonts.googleapis.com/css?family=Pacifico'); */
-  /* @import url('https://fonts.googleapis.com/css?family=Lobster'); */
+
 body{
     background-color: rgb(219, 212, 212);
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
 .materialboxed{
     border-radius: 100px
-}
-/* css all rows home page*/
-/* #R1{
-    background-image: url('public/image')
-}
-#R2{
-  background-color: red
-}
-#R3{
-    background-color: red;
-}
-nav {
-    color: #fff;
-    background-color:green
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-} */
-.parallax-container {
-  height: 400px;
 }
 .up{
     border: none;
@@ -34,15 +14,41 @@ nav {
     height: 240px;
 }
 p{
-    color:red;
+    color: rgb(149, 150, 139);
 }
-/* navbar */
-.light-blue {
-    background-color: rgba(25,25,25,0.5) !important;
+
+
+/* navigation bar section */
+#Nav{
+    background-color:rgba(10, 29, 41, 0.993);
+}
+/* head section */
+#Row1{
+    height: 500px;
+    background-color: rgba(4, 10, 37, 0.712);
+}
+
+#Head-Button{
+  background-color: #0A1D29;
+}
+
+#Head-text{
+    color:#CFD3CD;
+}
+/*  section 1 */
+#Row2{
+    background-color:#CFD3CD;
+    height:inherit;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#Row3{
+    background-color: rgba(4, 10, 37, 0.712);
+    height: 400px;
 }
 /* footer */
 .orange {
-    background-color:black !important;
+    background-color:#0A1D29 !important;
 }
 .row .col.l6 {
     width: 50%;
@@ -52,3 +58,13 @@ p{
 .cnt{
     text-align:center;
 }
+/* styling for cards */
+.card {
+
+    width: 400px;
+
+    border-radius: 5%;
+
+    border-top: 5%
+
+  }
