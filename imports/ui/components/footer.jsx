@@ -25,20 +25,20 @@ export default class Footer extends Component {
         <hr className="up"/>
       </div>
       <div className="col l3 s12">
-        <h5 className="white-text">Owners</h5>
+        <h5 className="white-text">Developers</h5>
         <hr/>
         <ul>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Lushomo Chimimba  <i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3"> Sithembinkhosi Siwo<i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Perseverance  <i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3"> Lushomo Chimimba<i className="fa fa-github"></i></a>
           </li>
           <li>
             <a href="#!" className="grey-text text-lighten-3">Joseph Yumba  <i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3">Sithembinkhosi Siwo  <i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3"> Perseverance  <i className="fa fa-github"></i></a>
           </li>
         </ul>
       </div>
@@ -46,7 +46,7 @@ export default class Footer extends Component {
   </div>
   <div className="footer-copyright">
     <div className="container">
-      © 2017 Copyright Text
+      © 2018 Copyright Text
     </div>
   </div>
 </footer>
