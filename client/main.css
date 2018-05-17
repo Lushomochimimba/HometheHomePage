@@ -1,6 +1,9 @@
 /* CSS declarations go here */
  /* @import url('https://fonts.googleapis.com/css?family=Pacifico'); */
   /* @import url('https://fonts.googleapis.com/css?family=Lobster'); */
+  * {
+    box-sizing: border-box;
+}
 body{
     background-color: rgb(219, 212, 212);
     font-family: Verdana, Geneva, Tahoma, sans-serif
