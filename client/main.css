@@ -60,11 +60,10 @@ p{
 }
 /* styling for cards */
 .card {
-
     width: 400px;
-
-    border-radius: 5%;
-
-    border-top: 5%
-
+    border-radius: 5px;
+    border-top: 5%;
+    text-align:center;
   }
+
+ 
