@@ -4,7 +4,7 @@ import route from '/imports/routing/router.js';
 import Infoz from '../api/UserInfo/collections.js';
 // import {Accounts} from 'meteor/accounts-base';
 import loadmaterialize from './materialize.js' ;
-import {SignUp} from './SignUp.jsx'
+import {SignUp} from './SignUp.jsx';
 import Navbar from '/imports/ui/components/navbar.jsx';
 
 
@@ -38,6 +38,7 @@ export class UserAccount extends Component{
                  <p>{info.profession}</p>
                  <p><i className="fa fa-phone" aria-hidden="true"></i>{info.phonenumber}</p>
                  <p><i className="fa fa-envelope" aria-hidden="true"></i>{info.email}</p>
+                 <p>{info.description}</p>
              </span>
             </div>
             </div> 
@@ -54,15 +55,20 @@ export class UserAccount extends Component{
     Meteor.logout();
     route.go('/login')
   }
+//   deleteAccount=(e,id)=>{
+//       Meteor.call('infoz.deleteAccount',id)
+//   }
    
       render() {
         return (
         <div>    
 
             <button type="Primary" className="btn btn-primary" onClick={this.logOut}>
-
         Logout
         </button>
+        {/* <button type="Primary" className="btn btn-primary delete" onClick={e =>this.deleteAccount(e,info._id)}>
+Delete Account 
+</button> */}
         {this.getUserInfo()}
         
            </div>

@@ -9,3 +9,6 @@ Meteor.methods({
    return res;
   }
 });
+// Meteor.methods({
+//   'infoz.deleteAccount':(info)=>Infoz.remove(info)
+// });
