@@ -32,6 +32,7 @@ getUserData=(e)=>{
   const password2 = target.password2.value;
   const phonenumber = target.phonenumber.value;
   const profession = target.profession.value;
+  const description= target.description.value;
   const location = target.location.value;  
   if(password.trim() !== password2.trim()){
       this.setState({
@@ -54,7 +55,7 @@ getUserData=(e)=>{
           phonenumber,
           profession,
           location,
-          phonenumber
+          description,
       },
       createdAt: new Date()
   }
@@ -67,6 +68,8 @@ getUserData=(e)=>{
           profession : this.state.profession,
           email : this.state.email,
           phonenumber : this.state.phonenumber,
+          location : this.state.location,          
+          description: this.state.description,
           // createdBy:currentUserId,
       }
       Meteor.call('infoz.create',info,(err,res)=>{
@@ -74,6 +77,8 @@ getUserData=(e)=>{
         if(res){
           const email = Meteor.user().emails[0].address
           route.go('/useraccount?email='+email)
+          // route.go('/cards?email='+email)
+          
         }else{
           console.log('failed to insert data in info')
         }
@@ -96,7 +101,17 @@ handleEmailChange=(e)=>{
     email:e.target.value
   })
 }
+handleDesriptionChange=(e)=>{
+  this.setState({
+    description:e.target.value
+  })
+}
 handlePhonenumberChange=(e)=>{
+  this.setState({
+    phonenumber:e.target.value
+  })
+}
+handleLocationChange=(e)=>{
   this.setState({
     phonenumber:e.target.value
   })
@@ -160,8 +175,16 @@ handlePhonenumberChange=(e)=>{
                <div className=" col s4">
                </div>
                <div className="input-field col s4">
-                  <input name="location" type="text" className="validate"/>
+                  <input name="location" type="text" className="validate" onChange={this.handleLocationChange}/>
                    <label type="text">Location</label>
+                </div>
+              </div>
+              <div className="row">
+               <div className=" col s4">
+               </div>
+               <div className="input-field col s4">
+                  <input name="description" type="text" className="validate" onChange={this.handleDesriptionChange}/>
+                   <label type="textarea">Desccribe your yourself briefly..</label>
                 </div>
               </div>
               <button type="Primary" className="btn btn-primary cnt"><a href="/useraccount"></a>Sign Up</button>
