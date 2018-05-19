@@ -35,7 +35,7 @@ p{
     margin-bottom: 20px
 }
 #Head-Button2{
-    background-color: #011640;
+    background-color: #010A26;
     color: rgb(255, 255, 255);
     width: 300px;
 }
@@ -58,7 +58,7 @@ p{
 }
 /* footer */
 .orange {
-    background-color:#010A26 !important;
+    background-color:#0A1D29 !important;
 }
 .row .col.l6 {
     width: 50%;
@@ -113,3 +113,4 @@ p{
 
   }
 
+ 
