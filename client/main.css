@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 
 body{
-    background-color: rgb(219, 212, 212);
+
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
@@ -20,24 +20,34 @@ p{
 
 /* navigation bar section */
 #Nav{
-    background-color:rgba(10, 29, 41, 0.993);
+    background-color:#010A26;
 }
 /* head section */
 #Row1{
     height: 500px;
-    background-color: rgba(4, 10, 37, 0.712);
+    background-color: rgba(1, 10, 38, 0.664);
 }
 
-#Head-Button{
-  background-color: #0A1D29;
+#Head-Button1{
+    background-color: rgb(232, 51, 57);
+    color: #ffffff;
+    width: 300px;
+    margin-bottom: 20px
 }
-
+#Head-Button2{
+    background-color: #011640;
+    color: rgb(255, 255, 255);
+    width: 300px;
+}
+#buttons{
+    padding-left: 300px;
+}
 #Head-text{
     color:#CFD3CD;
 }
 /*  section 1 */
 #Row2{
-    background-color:#CFD3CD;
+
     height:inherit;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -48,7 +58,7 @@ p{
 }
 /* footer */
 .orange {
-    background-color:#0A1D29 !important;
+    background-color:#010A26 !important;
 }
 .row .col.l6 {
     width: 50%;
@@ -68,3 +78,38 @@ p{
     border-top: 5%
 
   }
+  .growCard {
+
+    border: none;
+
+    font-size: 50px;
+
+    color: white;
+
+    position: relative;
+
+    transition: all 300ms ease-in-out;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    margin:5px;
+
+
+
+  }
+
+  .growCard:hover {
+
+    transform: scale(1.1);
+
+  }
+
+ .myTitle {
+
+    text-align:center;
+    font-family:monospace;
+
+  }
+

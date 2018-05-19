@@ -29,15 +29,17 @@ export default class Login extends Component{
     render(){
         return(
           <div>
-            <Navbar/>
-          <div className="center">
-          <h1>Login</h1>
-      <div className="Login">
+             <Navbar/>
+         
+         
+      <div className="center">
+      <h1 >Login</h1>
        <form className="col s12" onSubmit = {this.logUserIn}>
+       
         <div className="row">
-         <div className=" col s4">
+         <div className=" col m4 s12">
          </div>
-          <div className="input-field col s4">
+          <div className="input-field col m4 s12">
             <input name="email" type="email" className="validate"/>
              <label type="email">Email</label>
           </div>
@@ -45,18 +47,19 @@ export default class Login extends Component{
         <div className="row">
          <div className=" col s4">
          </div>
-          <div className="input-field col s4">
+          <div className="input-field col m4 s12">
             <input name="password" type="password" className="validate"/>
              <label type="password">Password</label>
           </div>
         </div>
-        <button type="Primary" className="btn btn-primary">
+        <button type="Primary" className="btn btn-primary center">
         login
         </button>
        </form>              
      </div>
     </div>
-    </div>
+    
+    
         )
     }
 }

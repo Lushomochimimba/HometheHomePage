@@ -35,11 +35,10 @@ export default class Home extends Component {
 
           <h3 id="Head-text">building client and service provider relationships</h3>
     <div className="row center-align">
-            <div className="col m4 s12">  
-             <a className="waves-effect waves-light btn-large right-align" id="Head-Button">Hire    .</a>
-           </div>
-           <div className="col m4 s12"> 
-           <a className="waves-effect waves-light btn-large left-align" id="Head-Button">Advertise your skills</a>
+            <div className="col m4 s12" id="buttons">  
+             <a className="waves-effect waves-light btn-large right-align" id="Head-Button1" href="/cards">Hire</a>
+           <br/>
+           <a className="waves-effect waves-light btn-large left-align" id="Head-Button2" href="/signup">Advertise your skills</a>
            </div>
       </div>       
         </div>
@@ -52,11 +51,12 @@ export default class Home extends Component {
 
 </div>
 
-<div className="row" id="Row2">
-  <div className="col">
+<div className="" id="Row2">
+  <div className="row">
   <div className="container">
-  <h4 className="center ">About 99Jobs</h4>
-  <hr/>
+  <h4 className="center "> 99Jobs</h4>
+  
+  <p></p>
 {/* first paragraph */}
      <div className="col m4 s12">
        <div className="icon-block">
@@ -75,8 +75,8 @@ export default class Home extends Component {
           </h2>
          <h5 className="center"> service providers</h5>
             <p className="light">
-                99JOBS aims to connect with local people who need your skills.
-                it is our goal to make your skills and talents available for both the zambian and international market.  
+                99JOBS aims to connect you with local clients and from  who need your skills.
+                it is our goal to make your skills and talents available for .  
             </p>
        </div> 
      </div>
@@ -90,7 +90,7 @@ export default class Home extends Component {
          <h5 className="center">clients</h5>
 
          <p className="light">
-        99JOBS aims to improve the quality of service you get by providing a wider range of recommended skilled individauls not just from your area but also from across the country. 
+        we aim to improve the quality of service you get by providing a wider range of  recommended local service providers from across the country. 
         </p>
        </div> 
      </div>
@@ -101,12 +101,13 @@ export default class Home extends Component {
 
 {/* parallaxed image */}
   <div className="parallax-container center valign-wrapper" id="Row3">
-
-    <div className="parallax"><img src="/images/work.jpg"/>
+    <div className="parallax"><img src="/images/mine.jpg"/>
     </div>
-
   </div>
-
+    <div className="parallax-container center valign-wrapper" id="Row3">
+    <div className="parallax"><img src="/images/road.jpg"/>
+  </div>
+  </div>
 {/* footer code */}
   <Footer/>
 
