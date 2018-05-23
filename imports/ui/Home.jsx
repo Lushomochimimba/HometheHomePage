@@ -55,8 +55,8 @@ export default class Home extends Component {
   <div className="row">
   <div className="container">
   <h4 className="center "> 99Jobs</h4>
-  
-  <p></p>
+  <hr></hr>
+
 {/* first paragraph */}
      <div className="col m4 s12">
        <div className="icon-block">
@@ -73,10 +73,10 @@ export default class Home extends Component {
           <h2 className="center light-blue-text">
               <i className="fa fa-child"></i>      
           </h2>
-         <h5 className="center"> service providers</h5>
+         <h5 className="center"> service provider</h5>
             <p className="light">
-                99JOBS aims to connect you with local clients and from  who need your skills.
-                it is our goal to make your skills and talents available for .  
+                99JOBS aims to connect you with local clients and who need your skills avaliable.
+                it is our goal to make your skills and talents available for the local and international market .  
             </p>
        </div> 
      </div>

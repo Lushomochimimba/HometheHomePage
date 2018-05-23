@@ -2,104 +2,210 @@
 
 body{
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .materialboxed{
-    border-radius: 100px
+
+    border-radius: 100px;
+
 }
 .up{
+
     border: none;
     border-left: 1px solid;
     height: 240px;
+    
 }
 p{
-    color: rgb(149, 150, 139);
-}
 
+    color: #010A26;
+
+}
 
 /* navigation bar section */
 #Nav{
+
     background-color:#010A26;
+
 }
+
 /* head section */
 #Row1{
+
     height: 500px;
     background-color: rgba(1, 10, 38, 0.664);
+
 }
 
 #Head-Button1{
+
     background-color: rgb(232, 51, 57);
     color: #ffffff;
     width: 300px;
     margin-bottom: 20px
+
 }
 #Head-Button2{
+
     background-color: #010A26;
     color: rgb(255, 255, 255);
     width: 300px;
+
 }
 #buttons{
+
     padding-left: 300px;
+
 }
 #Head-text{
+
     color:#CFD3CD;
+
 }
+
 /*  section 1 */
 #Row2{
 
     height:inherit;
     padding-top: 100px;
     padding-bottom: 100px;
+
 }
 #Row3{
+
     background-color: rgba(4, 10, 37, 0.712);
     height: 400px;
+
 }
+
 /* footer */
 .orange {
-    background-color:#0A1D29 !important;
+
+    background-color:#010A26 !important;
+
 }
 .row .col.l6 {
+
     width: 50%;
     left: auto;
     right: auto;
+
 }
-.cnt{
-    text-align:center;
-}
-/* styling for cards */
+
+/* styling for select category cards */
+
 .card {
 
     width: 400px;
-
     border-radius: 5%;
-
-    border-top: 5%
+    border-top: 5%;
 
   }
+/* login */
+
+  #login {
+
+    margin-left: 400px;
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 450px;
+    width: 500px;
+    height: 450px;
+    background-color: rgba(1, 10, 38, 0.795);
+
+  }
+
+  
+  #login-button{
+
+    background-color: #010A26;
+    color: rgb(255, 255, 255);
+    width: 300px; 
+
+  }
+  .main{
+
+    background-color: rgba(1, 10, 38, 0);
+    height: auto;
+    padding-bottom: 100px
+
+  }
+  
+  .input-field{
+
+    width: 300px !important ;
+    margin: auto ;
+    color: rgb(255, 255, 255) !important ;
+
+}
+#login-heading{
+    margin-bottom: 50px;
+}
+  /* sign up */
+
+  #signUp {
+
+    margin-left: 400px;
+    margin-top: 100px;
+    padding-right: 10px;
+    padding-top: 50px;
+    width: 500px;
+    height: auto;
+    background-color: rgba(1, 10, 38, 0.795);
+    padding-left: 100px;
+    padding-bottom: 50px;
+
+  }
+  .main2{
+
+    background-color: rgba(1, 10, 38, 0);
+    height: auto;
+    padding-bottom: 10px;
+
+  }
+  #signup-button{
+
+    background-color: #010A26 !important;
+    color: rgb(255, 255, 255) ! important;
+    width: 300px !important; 
+    margin-right: 100px;
+
+  }
+  .signUp-input{
+
+    width: 300px !important ;
+    margin: auto !important ;
+    color: rgb(255, 255, 255) !important ;
+
+  }
+  #gender-input{
+
+    padding-right: 20px;
+    padding-left: 1px;
+
+}
+ #signup-heading{
+
+    padding-right: 80px;
+    margin-bottom: 50px;
+
+ }
+
+  
+  /* categories cards */
   .growCard {
 
     border: none;
-
     font-size: 50px;
-
     color: white;
-
     position: relative;
-
     transition: all 300ms ease-in-out;
-
     cursor: pointer;
-
     overflow: hidden;
-
     margin:5px;
 
-
-
   }
-
   .growCard:hover {
 
     transform: scale(1.1);

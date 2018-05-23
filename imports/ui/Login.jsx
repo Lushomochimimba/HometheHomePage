@@ -28,18 +28,23 @@ export default class Login extends Component{
 
     render(){
         return(
-          <div>
+          <div className="main">
              <Navbar/>
          
          
-      <div className="center">
-      <h1 >Login</h1>
+      <div className="center" id="login">
+       
+        <div className="icon-block">
+        <i class="fa fa-user-circle  fa-3x"></i>
+        </div>
+        <h4 id="login-heading">login</h4>
+        <br/>
        <form className="col s12" onSubmit = {this.logUserIn}>
        
         <div className="row">
-         <div className=" col m4 s12">
+         <div className=" col">
          </div>
-          <div className="input-field col m4 s12">
+          <div className="input-field">
             <input name="email" type="email" className="validate"/>
              <label type="email">Email</label>
           </div>
@@ -47,12 +52,12 @@ export default class Login extends Component{
         <div className="row">
          <div className=" col s4">
          </div>
-          <div className="input-field col m4 s12">
+          <div className="input-field ">
             <input name="password" type="password" className="validate"/>
              <label type="password">Password</label>
           </div>
         </div>
-        <button type="Primary" className="btn btn-primary center">
+        <button type="Primary" className="btn btn-primary waves-effect waves-light center"id="login-button">
         login
         </button>
        </form>              

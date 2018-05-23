@@ -4,7 +4,7 @@ import {withTracker} from 'meteor/react-meteor-data';
 import {Accounts} from 'meteor/accounts-base';
 import Navbar from '/imports/ui/components/navbar.jsx';
 import Infoz from '../api/UserInfo/collections.js';
-
+import {Row, Input} from 'react-materialize'
 
 
 
@@ -118,23 +118,24 @@ handleLocationChange=(e)=>{
 }
     render(){
         return(
-          <div >
+          <div className="main2">
           <Navbar/>
-                <h1 className="cnt">Sign Up   </h1>
-            <div className="SignUp center">
+              
+            <div className="center"id="signUp">
+            <h4 id="signup-heading">Sign Up</h4>
              <form className="col s12" onSubmit = {this.getUserData}>
               <div className="row">
                <div className=" col s4">
                </div>
-                <div className="input-field col s4">
-                  <input placeholder="Placeholder" name="name" type="text" onChange={this.handleNameChange} className="validate"/>
+                <div className="input-field col s4 signUp-input">
+                  <input placeholder="" name="name" type="text" onChange={this.handleNameChange} className="validate"/>
                    <label type="text">Names</label>
                 </div>
               </div>
               <div className="row">
                <div className=" col s4">
                </div>
-                <div className="input-field col s4">
+                <div className="input-field col s4 signUp-input ">
                   <input name="email" type="email" onChange={this.handleEmailChange} className="validate"/>
                    <label type="text">Email</label>
                 </div>
@@ -142,7 +143,7 @@ handleLocationChange=(e)=>{
               <div className="row">
                <div className=" col s4">
                </div>
-                <div className="input-field col s4">
+                <div className="input-field col s4 signUp-input">
                   <input name="password" type="password" className="validate"/>
                    <label type="password">Create Password</label>
                 </div>
@@ -150,7 +151,7 @@ handleLocationChange=(e)=>{
               <div className="row">
                <div className=" col s4">
                </div>
-                <div className="input-field col s4">
+                <div className="input-field col s4 signUp-input">
                   <input name="password2" type="password" className="validate"/>
                    <label type="password">Confirm Password</label>
                 </div>
@@ -158,7 +159,7 @@ handleLocationChange=(e)=>{
               <div className="row">
                <div className=" col s4">
                </div>
-                <div className="input-field col s4">
+                <div className="input-field col s4 signUp-input">
                   <input name="phonenumber" type="number" onChange={this.handlePhonenumberChange} className="validate"/>
                    <label type="number">Phone Number</label>
                 </div>
@@ -166,7 +167,7 @@ handleLocationChange=(e)=>{
               <div className="row">
                <div className=" col s4">
                </div>
-               <div className="input-field col s4">
+               <div className="input-field col s4 signUp-input">
                   <input name="profession" type="text" onChange={this.handleProfessionChange} className="validate"/>
                    <label type="text">Profession</label>
                 </div>
@@ -174,7 +175,7 @@ handleLocationChange=(e)=>{
               <div className="row">
                <div className=" col s4">
                </div>
-               <div className="input-field col s4">
+               <div className="input-field col s4 signUp-input">
                   <input name="location" type="text" className="validate" onChange={this.handleLocationChange}/>
                    <label type="text">Location</label>
                 </div>
@@ -182,15 +183,29 @@ handleLocationChange=(e)=>{
               <div className="row">
                <div className=" col s4">
                </div>
-               <div className="input-field col s4">
-                  <input name="description" type="text" className="validate" onChange={this.handleDesriptionChange}/>
+               <div className="input-field col s4 signUp-input">
+                 <textarea name="description" className="materialize-textarea" onChange={this.handleDesriptionChange}></textarea>
                    <label type="textarea">Desccribe your yourself briefly..</label>
                 </div>
               </div>
-              <button type="Primary" className="btn btn-primary cnt"><a href="/useraccount"></a>Sign Up</button>
+              <div className="row">
+               <div className=" col s4">
+               </div>
+               <div className="input-field col s4">
+               <Row>
+  <Input s={12} type='select' label="gender" defaultValue='2' id="gender-input">
+    <option value='1'>male</option>
+    <option value='2'>female</option>
+    <option value='3'>other</option>
+  </Input>
+</Row>
+                </div>
+              </div>
+              <button type="Primary" className="btn btn-primary" id="signup-button"><a href="/useraccount"></a>Sign Up</button>
              </form>              
-              <p>Already have an account?<a href="/login">Sign In</a></p>
+             
            </div>
+           <center><p>Already have an account?<a href="/login">Sign In</a></p></center>
           </div>
         )
     }

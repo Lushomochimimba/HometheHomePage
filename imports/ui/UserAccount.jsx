@@ -60,6 +60,7 @@ export class UserAccount extends Component{
 //   }
    
       render() {
+        if(Meteor.user()){
         return (
         <div>    
 
@@ -74,7 +75,11 @@ Delete Account
            </div>
                  
         )
-        
+    }
+    else{
+        return(
+            route.go('/')
+    )} 
     }
 }
 
