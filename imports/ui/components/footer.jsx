@@ -46,7 +46,7 @@ export default class Footer extends Component {
   </div>
   <div className="footer-copyright">
     <div className="container">
-      © 2018 Copyright Text
+      © 2018 Copyright of 99JOBS
     </div>
   </div>
 </footer>

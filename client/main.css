@@ -1,3 +1,76 @@
+@import "compass/css3";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+
+/* Main styles */
+
+
+.text {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #010A26;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: rgb(58, 160, 191);
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #010A26;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+text{
+
+    text-transform: uppercase;
+    font: 8.5em/1 'Roboto', sans-serif; 
+
+}
+svg {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+
 /* CSS declarations go here */
 
 body{
@@ -5,7 +78,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.materialboxed{
+.materialboxe{
 
     border-radius: 100px;
 
@@ -17,11 +90,12 @@ body{
     height: 240px;
     
 }
-p{
+p,h5{
 
     color: #010A26;
-
-}
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: justify;
+  }
 
 /* navigation bar section */
 #Nav{
@@ -74,11 +148,16 @@ p{
 }
 #Row3{
 
-    background-color: rgba(4, 10, 37, 0.712);
+    background-color: rgba(4, 10, 37, 0.925);
     height: 400px;
 
 }
+#Row4{
 
+  background-color: rgba(58, 160, 191, 0.747);
+  height: 400px;
+  
+}
 /* footer */
 .orange {
 
@@ -119,7 +198,7 @@ p{
   
   #login-button{
 
-    background-color: #010A26;
+    background-color: rgb(232, 51, 57);
     color: rgb(255, 255, 255);
     width: 300px; 
 
@@ -166,7 +245,7 @@ p{
   }
   #signup-button{
 
-    background-color: #010A26 !important;
+    background-color: rgb(232, 51, 57)!important;
     color: rgb(255, 255, 255) ! important;
     width: 300px !important; 
     margin-right: 100px;
@@ -192,31 +271,39 @@ p{
 
  }
 
-  
-  /* categories cards */
-  .growCard {
 
-    border: none;
-    font-size: 50px;
-    color: white;
-    position: relative;
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
-    overflow: hidden;
-    margin:5px;
+/* new cards */
+.growCard {
 
-  }
-  .growCard:hover {
+  border: none;
+  font-size: 50px;
+  color: white;
+  position: relative;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  margin:10px;
+  background-color:rgba(10, 29, 41, 0.993);
+  height:170px;
+  border-radius: 50px;
 
-    transform: scale(1.1);
+}
 
-  }
+.growCard:hover {
 
- .myTitle {
+  transform: scale(1.1);
 
-    text-align:center;
-    font-family:monospace;
+}
 
-  }
+.myTitle {
 
- 
+  text-align:center;
+
+}
+
+.icon{
+
+ font-size:90px;
+
+}
+
