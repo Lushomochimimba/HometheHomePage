@@ -36,9 +36,10 @@ export class UserAccount extends Component{
              <span>
                  <h4>{info.name}</h4>
                  <p>{info.profession}</p>
-                 <p><i className="fa fa-phone" aria-hidden="true"></i>{info.phonenumber}</p>
-                 <p><i className="fa fa-envelope" aria-hidden="true"></i>{info.email}</p>
-                 <p>{info.description}</p>
+                 <p><i className="fa fa-phone" aria-hidden="true"></i> {info.phonenumber}</p>
+                 <p><i className="fa fa-envelope" aria-hidden="true"></i> {info.email}</p>
+                 <p><i className="fas fa-user-circle"></i> {info.gender}</p>                 
+                 <p> {info.description}</p>
              </span>
             </div>
             </div> 

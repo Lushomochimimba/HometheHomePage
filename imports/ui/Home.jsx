@@ -54,33 +54,37 @@ export default class Home extends Component {
 <div className="" id="Row2">
   <div className="row">
   <div className="container">
-  <h4 className="center "> 99Jobs</h4>
+  <h4 className="center "> About Us</h4>
   <hr></hr>
 
-{/* first paragraph */}
+{/* first paragraph block*/}
      <div className="col m4 s12">
-       <div className="icon-block">
-         <h2 className="center light-blue-text">
-         <i className="fa fa-crown fa-4x"></i>         </h2>
-         <h5 className="center">Our Goal</h5>
-         <p className="light">
-         Our goal is to connect you with local (and remote) people who need your skills, giving them access to quality talent and giving you hands-on experience and a pay-cheque of course! We'll be operating initially in Zambia.         </p>
-        </div>
+          <div className="icon-block">
+                 <h2 className="center light-blue-text">
+                 <span class="icon-spoon">&#xe991;</span>
+                 </h2>
+                 {/* paragraph heading */}
+              <h5 className="center">Our Goal</h5>
+                {/* paragraph */}
+            <p className="light align-center">
+              99JOBS aims to improve the unemployment rate in zambia and in general the zambain market by improving client and service provider relationships.By giving service providers and enterprenuers a platform to advertise themselves to 
+              the zambian market and the market in general, we give them <b>an oppotunity to grow themselves and their businesses</b>.99JOBS jobs also want help clients know that the zambian market has more to offer than they realize.
+            </p>
+          </div>
      </div>
-{/* second paragraph */}
+{/* second paragraph block*/}
      <div className="col m4 s12">
        <div className="icon-block">
           <h2 className="center light-blue-text">
               <i className="fa fa-child"></i>      
           </h2>
-         <h5 className="center"> service provider</h5>
+         <h5 className="center"> service provider and enterprenuer</h5>
             <p className="light">
-                99JOBS aims to connect you with local clients and who need your skills avaliable.
-                it is our goal to make your skills and talents available for the local and international market .  
+                ational market .  
             </p>
        </div> 
      </div>
-     {/* third paragraph */}
+     {/* third paragraph block*/}
 
      <div className="col m4 s12">
        <div className="icon-block">
@@ -101,11 +105,59 @@ export default class Home extends Component {
 
 {/* parallaxed image */}
   <div className="parallax-container center valign-wrapper" id="Row3">
+
+  {/* svg text */}
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300">
+
+  
+  <symbol id="s-text">
+    <text text-anchor="middle"
+            x="50%" y="50%" dy=".35em">
+        99
+     </text>
+  </symbol>
+
+  
+   
+  <use xlinkHref="#s-text" class="text"
+            ></use>
+  <use xlinkHref="#s-text" class="text"
+            ></use>
+  <use xlinkHref="#s-text" class="text"
+            ></use>
+  <use xlinkHref="#s-text" class="text"
+            ></use>
+
+</svg>
     <div className="parallax"><img src="/images/mine.jpg"/>
     </div>
   </div>
-    <div className="parallax-container center valign-wrapper" id="Row3">
-    <div className="parallax"><img src="/images/road.jpg"/>
+  {/* second  parallax image*/}
+    <div className="parallax-container center valign-wrapper" id="Row4">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300">
+
+  
+  <symbol id="r-text">
+    <text text-anchor="middle"
+            x="50%" y="50%" dy=".35em">
+     99 JOBS
+     </text>
+  </symbol>
+
+  
+   
+  <use xlinkHref="#r-text" class="text"
+            ></use>
+  <use xlinkHref="#r-text" class="text"
+            ></use>
+  <use xlinkHref="#r-text" class="text"
+            ></use>
+  <use xlinkHref="#r-text" class="text"
+            ></use>
+
+</svg>
+    <div className="parallax"><img src="/images/welder.jpg"/>
+ 
   </div>
   </div>
 {/* footer code */}

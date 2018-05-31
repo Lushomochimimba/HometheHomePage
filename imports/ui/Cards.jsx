@@ -23,11 +23,10 @@ export class Cards extends Component{
 
         console.log("smhdfkagsdfk")
         return infoz.map((info) => (
-             
-            <div key ={info._id}>
-           <div className="row>">
-                 <div className="column">
-               <div className="card">
+
+          <div className="container" key ={info._id}>
+
+              <div className="card col s12 m4">
      <div className="card-image waves-effect waves-block waves-light">
        <img className="activator" src="images/profile.jpeg"/>
      </div>
@@ -42,9 +41,8 @@ export class Cards extends Component{
        <p>{info.description}</p>
      </div>
    </div>
-   </div>
   </div>
-            </div> 
+          
     
             
         )
@@ -66,12 +64,15 @@ export class Cards extends Component{
     }
   }
 export default withTracker(() => {
+  Meteor.subscribe('categories');
   Meteor.subscribe('users');
-  
   Meteor.subscribe('infoz');
+  const dReady =  Meteor.subscribe('categories');
+  console.log(dReady.ready());
   const email = route.current().queryParams.email;
+
    return {
-       infoz : Infoz.find({}).fetch(),
+       infoz : Infoz.find({profession:Session.get('categoryName')}).fetch(),
    };
 })(Cards);
 
