@@ -64,9 +64,7 @@ export class UserAccount extends Component{
         return (
         <div>    
 
-            <button type="Primary" className="btn btn-primary" onClick={this.logOut}>
-        Logout
-        </button>
+       
         {/* <button type="Primary" className="btn btn-primary delete" onClick={e =>this.deleteAccount(e,info._id)}>
 Delete Account 
 </button> */}
