@@ -10,6 +10,9 @@ import {Row, Input} from 'react-materialize'
 
 
 
+
+
+
 export class SignUp extends Component{
 constructor(props){
   super(props);
@@ -34,6 +37,7 @@ getUserData=(e)=>{
   const profession = target.profession.value;
   const description= target.description.value;
   const location = target.location.value;  
+  const gender = target.gender.value; 
   if(password.trim() !== password2.trim()){
       this.setState({
           error:'do not use password as password'
@@ -56,6 +60,7 @@ getUserData=(e)=>{
           profession,
           location,
           description,
+          gender,
       },
       createdAt: new Date()
   }
@@ -70,6 +75,7 @@ getUserData=(e)=>{
           phonenumber : this.state.phonenumber,
           location : this.state.location,          
           description: this.state.description,
+          gender: this.state.gender,
           // createdBy:currentUserId,
       }
       Meteor.call('infoz.create',info,(err,res)=>{
@@ -85,7 +91,6 @@ getUserData=(e)=>{
 
       });
 }
-
 handleNameChange=(e)=>{
   this.setState({
     name:e.target.value
@@ -113,41 +118,52 @@ handlePhonenumberChange=(e)=>{
 }
 handleLocationChange=(e)=>{
   this.setState({
-    phonenumber:e.target.value
+    location:e.target.value
   })
 }
-    render(){
-        return(
-          <div className="main2">
-          <Navbar/>
-              
-            <div className="center"id="signUp">
-            <h4 id="signup-heading">Sign Up</h4>
-             <form className="col s12" onSubmit = {this.getUserData}>
-              <div className="row">
-               <div className=" col s4">
-               </div>
-                <div className="input-field col s4 signUp-input">
-                  <input placeholder="" name="name" type="text" onChange={this.handleNameChange} className="validate"/>
-                   <label type="text">Names</label>
-                </div>
-              </div>
-              <div className="row">
-               <div className=" col s4">
-               </div>
-                <div className="input-field col s4 signUp-input ">
-                  <input name="email" type="email" onChange={this.handleEmailChange} className="validate"/>
-                   <label type="text">Email</label>
-                </div>
-              </div>
-              <div className="row">
-               <div className=" col s4">
-               </div>
-                <div className="input-field col s4 signUp-input">
-                  <input name="password" type="password" className="validate"/>
-                   <label type="password">Create Password</label>
-                </div>
-              </div>
+handleGenderChange=(e)=>{
+  this.setState({
+    gender:e.target.value
+  })
+}
+deleteAccount=(e,id)=>{
+  e.preventDefault();      
+    Meteor.call('infoz.deleteAccount',id);
+  // Meteor.logout(); 
+  // Meteor.call('infoz.del',id)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  // route.go('/')      
+}
+render(){
+  return(
+    <div className="main2">
+    <Navbar/>
+      <div className="center"id="signUp">
+      <h4 id="signup-heading">Sign Up</h4>
+       <form className="col s12" onSubmit = {this.getUserData}>
+                 <div className="row">
+                    <div className=" col s4">
+                    </div>
+                      <div className="input-field col s4 signUp-input">
+                        <input  name="name" type="text" onChange={this.handleNameChange} className="validate"/>
+                        <label type="text">Names</label>
+                      </div>
+                 </div>
+                 <div className="row">
+                    <div className=" col s4">
+                    </div>
+                      <div className="input-field col s4 signUp-input">
+                        <input name="email" type="email" onChange={this.handleEmailChange} className="validate"/>
+                        <label type="text">Email</label>
+                      </div>
+                 </div>
+                  <div className="row">
+                    <div className=" col s4">
+                    </div>
+                      <div className="input-field col s4 signUp-input">
+                        <input name="password" type="password" className="validate"/>
+                        <label type="password">Create Password</label>
+                      </div>
+                  </div>
               <div className="row">
                <div className=" col s4">
                </div>
@@ -168,8 +184,28 @@ handleLocationChange=(e)=>{
                <div className=" col s4">
                </div>
                <div className="input-field col s4 signUp-input">
-                  <input name="profession" type="text" onChange={this.handleProfessionChange} className="validate"/>
-                   <label type="text">Profession</label>
+               <Row>
+
+<Input s={12} type='select' label="Profession" name="profession" defaultValue='2' id="gender-input" onChange={this.handleProfessionChange}>
+
+  <option>Barber</option>
+  <option>Carpenter</option>
+  <option>Hair Dresser</option>
+  <option>Plumber</option>
+  <option>Gardeners</option>
+  <option>Electrician</option>
+  <option>Maid</option>
+  <option>Mechanics</option>
+  <option>Brick Layers</option>
+  
+  
+
+
+
+
+</Input>
+
+</Row>
                 </div>
               </div>
               <div className="row">
@@ -181,29 +217,30 @@ handleLocationChange=(e)=>{
                 </div>
               </div>
               <div className="row">
-               <div className=" col s4">
-               </div>
-               <div className="input-field col s4 signUp-input">
-                 <textarea name="description" className="materialize-textarea" onChange={this.handleDesriptionChange}></textarea>
-                   <label type="textarea">Desccribe your yourself briefly..</label>
-                </div>
-              </div>
-              <div className="row">
-               <div className=" col s4">
-               </div>
-               <div className="input-field col s4">
-               <Row>
-  <Input s={12} type='select' label="gender" defaultValue='2' id="gender-input">
-    <option value='1'>male</option>
-    <option value='2'>female</option>
-    <option value='3'>other</option>
-  </Input>
+<div className=" col s4">
+</div>
+<div className="input-field col s4 signUp-input">
+  <textarea name="description" className="materialize-textarea" onChange={this.handleDesriptionChange}></textarea>
+    <label type="textarea">Describe your yourself briefly..</label>
+ </div>
+</div>
+<div className="row">
+<div className=" col s4">
+</div>
+<div className="input-field col s4">
+<Row>
+<Input s={12} type='select' label="Gender" defaultValue='2' id="gender-input" name="gender" onChange={this.handleGenderChange}>
+<option >male</option>
+<option >female</option>
+</Input>
 </Row>
-                </div>
-              </div>
-              <button type="Primary" className="btn btn-primary" id="signup-button"><a href="/useraccount"></a>Sign Up</button>
-             </form>              
-             
+ </div>
+</div>   
+              <button type="Primary" className="btn btn-primary cnt" id="signup-button"><a href="/useraccount"></a>Sign Up</button>
+             </form>
+             {/* <button type="Danger" className="btn btn-primary delete" onClick={e =>this.deleteAccount(e,Infoz._id)}>
+Delete Account 
+</button>                  */}
            </div>
            <center><p>Already have an account?<a href="/login">Sign In</a></p></center>
           </div>
@@ -212,7 +249,9 @@ handleLocationChange=(e)=>{
 }
 export default withTracker(() => {
   Meteor.subscribe('infoz');
+  Meteor.subscribe('users');
+  
    return {
-       infoz : Infoz.find().fetch(),
+       infoz : Infoz.find().fetch(),      
    };
 })(SignUp);

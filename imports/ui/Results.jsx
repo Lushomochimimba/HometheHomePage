@@ -1,134 +1,99 @@
 import React, {Component, Fragment} from 'react';
-
 import route from '/imports/routing/router.js';
-
+import {withTracker} from 'meteor/react-meteor-data';
+import {Categories} from '../api/UserInfo/collections.js';
 // import {Accounts} from 'meteor/accounts-base';
-
 import loadmaterialize from './materialize.js' ;
+import { Session } from 'meteor/session';
+import Navbar from '/imports/ui/components/navbar.jsx';
 
 
 
-
-
-
-
-export default class Results extends Component{
-
-
-
-   
-
-    render(){
-
-        return(
-
-            <div id="myCards">
-            <div>
-            <h2 className="myTitle"> Professional Service Providers</h2>
-            </div>
-            <br></br>
-            <div className="row">
-            <div className="col ">
-            <a href=""><div className="card American blue growCard ">
-                <div className="card-content white-text">
-                  <span className="card-title">Electricians and Engineers</span>
-                </div>
-
-              </div></a>
-
-            </div>
-
-            <div className="col ">
-
-            <a href=""><div className="card American blue growCard ">
-
-              <div className="card-content white-text">
-
-                <span className="card-title">Hair Dressers and Barbers</span>
-
-                
-
-              </div>
-
-            </div></a>
-
-          </div>
-
-          <div className="col ">
-
-          <a href=""> <div className="card American blue  growCard">
-
-              <div className="card-content white-text">
-
-                <span className="card-title">Maids and House helpers</span>
-
-               
-
-              </div>
-
-            </div></a>
-
-          </div>
-
-        </div>
-
-        <div className="row">
-
-            <div className="col ">
-
-            <a href=""><div className="card American blue growCard">
-
-                <div className="card-content white-text">
-
-                  <span className="card-title">Brick Layers and Carpenters</span>
-
-                 
-
-                </div>
-
-              </div></a>
-
-            </div>
-
-            <div className="col ">
-
-            <a href=""><div className="card American blue growCard">
-
-              <div className="card-content white-text">
-
-                <span className="card-title">Technicians and Gadget fixers</span>
-
-               
-
-              </div>
-
-            </div></a>
-
-          </div>
-
-          <div className="col ">
-
-          <a href=""><div className="card American blue growCard">
-
-              <div className="card-content white-text">
-
-                <span className="card-title">Tailors and Shoe repairers</span>
-
-              </div>
-
-            </div></a>
-
-          </div>
-
-        </div>
-
-          </div>
-
-          
-
-        )
-
+export class Results extends Component{
+  
+    getHandler=()=>{
+      session.get('categoryName')
     }
 
+    getSessionHandler=(e)=>{
+      const key = e.target.id
+      console.log(key);
+      
+        const categ = Categories.findOne({_id:key});
+        console.log(JSON.stringify(categ));
+        Session.set('categoryName',categ.name);
+        route.go('/cards')
+        // getSessionHandler=(e)=>{
+        //   const key = e.target.id
+        //   console.log(key);
+        //     $(".container").on('click', (e)=> {
+        //     const categ = Categories.findOne({_id:key});
+        //     console.log(JSON.stringify(categ));
+        //     Session.set('categoryName',categ.name);
+        //     route.go('/cards') 
+        //     });
+        //     $(".card American blue growCard col s12 m4").on('click', (e)=> {
+        //       const categ = Categories.findOne({_id:key});
+        //       console.log(JSON.stringify(categ));
+        //       Session.set('categoryName',categ.name);
+        //       route.go('/cards') 
+        //       });
+        //       $(".card-content white-text").on('click',(e)=> {
+        //         const categ = Categories.findOne({_id:key});
+        //         console.log(JSON.stringify(categ));
+        //         Session.set('categoryName',categ.name);
+        //         route.go('/cards') 
+        //         });
+        //         $(".card-title").on('click', (e)=> {
+        //           const categ = Categories.findOne({_id:key});
+        //           console.log(JSON.stringify(categ));
+        //           Session.set('categoryName',categ.name);
+        //           route.go('/cards') 
+        //           });
+        //         }
+    
+        
+ };
+  displayHandler=()=>{
+    const categories = this.props.categories;                            
+         return( this.props.categories.map((category) => (
+             <div  className="container" onClick={this.getSessionHandler} key ={category._id}>
+                    <div  id={category._id} className="card American blue growCard col s12 m4" >
+                        <div id={category._id}className="card-content white-text">
+                          <span id={category._id} className="card-title">{category.name}</span>
+                        </div>
+                    </div>
+             </div> 
+
+         )
+         )
+    );  
+    }
+
+ render(){
+    console.log(this.props.dataReady);
+    if(this.props.dataReady === undefined){
+      return <div>still not defined</div>
+    } else {  
+      console.log(this.props.dataReady)      
+      return(
+            <div>
+                <Navbar/>
+            {this.displayHandler()}
+            </div>)
+    }
+  }
 }
 
+export default withTracker(() => {
+  Meteor.subscribe('categories');
+  Meteor.subscribe('infoz');
+  Meteor.subscribe('users');
+  
+  
+  const dReady =  Meteor.subscribe('categories');
+   return {
+    categories : Categories.find({}).fetch(),
+    dataReady: dReady.ready(),
+   };
+})(Results);
