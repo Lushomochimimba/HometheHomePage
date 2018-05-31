@@ -79,7 +79,9 @@ export class Results extends Component{
       return(
             <div>
                 <Navbar/>
+                <div className="row">
             {this.displayHandler()}
+            </div>
             </div>)
     }
   }
