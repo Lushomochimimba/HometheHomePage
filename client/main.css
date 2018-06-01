@@ -329,36 +329,50 @@ h4{
 
 
 /* new cards */
-.growCard {
 
-  border: none;
-  font-size: 50px;
-  color: white;
+.growCards {
+
+  color: rgb(232, 51, 57);
+
   position: relative;
+
   transition: all 300ms ease-in-out;
+
   cursor: pointer;
+
   overflow: hidden;
-  margin:10px;
-  background-color:rgba(10, 29, 41, 0.993);
-  height:170px;
+
+  background-color:#010A26;
+
+  height:170px; 
+
   border-radius: 50px;
 
+  padding: 45px !important;
+
+  text-align: center !important;
+
+  width: 350px !important;
+
+  margin:40px !important;
+
+  
+
+
+
 }
 
-.growCard:hover {
 
-  transform: scale(1.1); 
+
+.growCards:hover {
+
+
+
+  transform: scale(1.1);
+
+
 
 }
-
-.myTitle {
-
-  text-align:center;
-
-}
-
-.icon{
-
- font-size:90px;
-
+#center{
+  text-align: center
 }

@@ -22,17 +22,16 @@ export default class Footer extends Component {
       </div>
       <div className="col l3 s12">
         <h5 className="white-text"></h5>
-        <hr className="up"/>
       </div>
       <div className="col l3 s12">
         <h5 className="white-text">Developers</h5>
         <hr/>
         <ul>
           <li>
-            <a href="#!" className="grey-text text-lighten-3"> Sithembinkhosi Siwo<i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3"> Sithembinkhosi Siwo   <i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3"> Lushomo Chimimba<i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3"> Lushomo Chimimba   <i className="fa fa-github"></i></a>
           </li>
           <li>
             <a href="#!" className="grey-text text-lighten-3">Joseph Yumba  <i className="fa fa-github"></i></a>
