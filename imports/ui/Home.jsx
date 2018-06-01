@@ -36,7 +36,7 @@ export default class Home extends Component {
           <h3 id="Head-text">building client and service provider relationships</h3>
     <div className="row center-align">
             <div className="col m4 s12" id="buttons">  
-             <a className="waves-effect waves-light btn-large right-align" id="Head-Button1" href="/results">Hire</a>
+             <a className="waves-effect waves-light btn-large right-align" id="Head-Button1" href="/cards">Hire</a>
            <br/>
            <a className="waves-effect waves-light btn-large left-align" id="Head-Button2" href="/signup">Advertise your skills</a>
            </div>
