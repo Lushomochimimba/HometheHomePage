@@ -29,18 +29,16 @@ export class UserAccount extends Component{
             <div key ={info._id}>
             <Navbar/>
                 <div className="row">
-              <div className="col s3">
-               {/* <img className="materialboxed" width="200" height="200" src="/images/profile.jpeg"/> */}
-              </div>
-            <div className="col s5">
-             <span>
+            <div className="center">
+             <div className="center">
                  <h4>{info.name}</h4>
-                 <p>{info.profession}</p>
-                 <p><i className="fa fa-phone" aria-hidden="true"></i> {info.phonenumber}</p>
-                 <p><i className="fa fa-envelope" aria-hidden="true"></i> {info.email}</p>
-                 <p><i className="fas fa-user-circle"></i> {info.gender}</p>                 
-                 <p> {info.description}</p>
-             </span>
+                 <p id="center">{info.profession}</p>
+                 <p id="center"><i className="fa fa-phone" aria-hidden="true"></i> {info.phonenumber}</p>
+                 <p id="center"><i className="fa fa-envelope" aria-hidden="true"></i> {info.email}</p>
+                 <p id="center"><i className="fas fa-user-circle"></i> {info.gender}</p>  
+                 <h1>DESCRIPTION</h1>               
+                 <p id="center"> {info.description}</p>
+             </div>
             </div>
             </div> 
             </div>

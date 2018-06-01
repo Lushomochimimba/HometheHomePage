@@ -57,9 +57,9 @@ export class Results extends Component{
   displayHandler=()=>{
     const categories = this.props.categories;                            
          return( this.props.categories.map((category) => (
-             <div  className="container" onClick={this.getSessionHandler} key ={category._id}>
-                    <div  id={category._id} className="card American blue growCard col s12 m4" >
-                        <div id={category._id}className="card-content white-text">
+             <div  className="" onClick={this.getSessionHandler} key ={category._id}>
+                    <div  id={category._id} className="card col s12 m4 growCard" >
+                        <div id={category._id}className="card-content">
                           <span id={category._id} className="card-title">{category.name}</span>
                         </div>
                     </div>
@@ -79,7 +79,9 @@ export class Results extends Component{
       return(
             <div>
                 <Navbar/>
+                <div className="row" id="yyy">
             {this.displayHandler()}
+            </div>
             </div>)
     }
   }
