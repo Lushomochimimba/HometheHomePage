@@ -35,8 +35,8 @@ export default class Home extends Component {
 
           <h3 id="Head-text">building client and service provider relationships</h3>
     <div className="row center-align">
-            <div className="col m4 s12" id="buttons">  
-             <a className="waves-effect waves-light btn-large right-align" id="Head-Button1" href="/cards">Hire</a>
+            <div className="col m4  offset-m4 s12" id="buttons">  
+             <a className="waves-effect waves-light btn-large right-align" id="Head-Button1" href="/results">Hire</a>
            <br/>
            <a className="waves-effect waves-light btn-large left-align" id="Head-Button2" href="/signup">Advertise your skills</a>
            </div>
@@ -61,13 +61,14 @@ export default class Home extends Component {
      <div className="col m4 s12">
           <div className="icon-block">
                  <h2 className="center light-blue-text">
-                 <span class="icon-spoon">&#xe991;</span>
+                 <i className="fa fa-handshake-alt"></i>
+                 <i className="fa fa-handshake-o" style={{"fontSize":48+"px"}}></i>
                  </h2>
                  {/* paragraph heading */}
               <h5 className="center">Our Goal</h5>
                 {/* paragraph */}
             <p className="light align-center">
-              99JOBS aims to improve the unemployment rate in zambia and in general the zambain market by improving client and service provider relationships.By giving service providers and enterprenuers a platform to advertise themselves to 
+              <b>99JOBS</b> aims to improve the unemployment rate in zambia and in general improve the zambain market by improving client and service provider relationships.By giving service providers and enterprenuers a platform to advertise themselves to 
               the zambian market and the market in general, we give them <b>an oppotunity to grow themselves and their businesses</b>.99JOBS jobs also want help clients know that the zambian market has more to offer than they realize.
             </p>
           </div>
@@ -76,11 +77,11 @@ export default class Home extends Component {
      <div className="col m4 s12">
        <div className="icon-block">
           <h2 className="center light-blue-text">
-              <i className="fa fa-child"></i>      
+          <i class="fa fa-users" style={{"fontSize":48+"px"}}></i>      
           </h2>
          <h5 className="center"> service provider and enterprenuer</h5>
             <p className="light">
-                ational market .  
+              Service providers and enterprenuers play a very important role in the development of the zambian market. <b>99JOBS</b> is determined to help you to grow as an enterprenuer and a service provider.Sign up <a href="/signup">here</a> and help us help you grow in the Zambian market.  
             </p>
        </div> 
      </div>
@@ -89,7 +90,7 @@ export default class Home extends Component {
      <div className="col m4 s12">
        <div className="icon-block">
          <h2 className="center light-blue-text">
-         <i className="fa fa-question-circle"></i>         
+         <i class="fa fa-user" style={{fontSize:48+"px"}}></i>       
          </h2>
          <h5 className="center">clients</h5>
 
@@ -111,21 +112,21 @@ export default class Home extends Component {
 
   
   <symbol id="s-text">
-    <text text-anchor="middle"
+    <text textAnchor="middle"
             x="50%" y="50%" dy=".35em">
-        99
+        
      </text>
   </symbol>
 
   
    
-  <use xlinkHref="#s-text" class="text"
+  <use xlinkHref="#s-text" className="text"
             ></use>
-  <use xlinkHref="#s-text" class="text"
+  <use xlinkHref="#s-text" className="text"
             ></use>
-  <use xlinkHref="#s-text" class="text"
+  <use xlinkHref="#s-text" className="text"
             ></use>
-  <use xlinkHref="#s-text" class="text"
+  <use xlinkHref="#s-text" className="text"
             ></use>
 
 </svg>
@@ -138,7 +139,7 @@ export default class Home extends Component {
 
   
   <symbol id="r-text">
-    <text text-anchor="middle"
+    <text textAnchor="middle"
             x="50%" y="50%" dy=".35em">
     99 JOBS
      </text>
@@ -146,13 +147,13 @@ export default class Home extends Component {
 
   
    
-  <use xlinkHref="#r-text" class="text"
+  <use xlinkHref="#r-text" className="text"
             ></use>
-  <use xlinkHref="#r-text" class="text"
+  <use xlinkHref="#r-text" className="text"
             ></use>
-  <use xlinkHref="#r-text" class="text"
+  <use xlinkHref="#r-text" className="text"
             ></use>
-  <use xlinkHref="#r-text" class="text"
+  <use xlinkHref="#r-text" className="text"
             ></use>
 
 </svg>

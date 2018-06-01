@@ -26,9 +26,9 @@ export class Cards extends Component{
 
           <div className="container" key ={info._id}>
 
-              <div className="card col s12 m4">
+              <div className="card col s12 m4" style={{"margin":15+"px"}}>
      <div className="card-image waves-effect waves-block waves-light">
-       <img className="activator" src="images/profile.jpeg"/>
+     
      </div>
      <div className="card-content">
        <span className="card-title activator grey-text text-darken-4"><b>Name:</b> {info.name}<i className="fa fa-ellipsis-v right"></i></span>
@@ -37,7 +37,7 @@ export class Cards extends Component{
        <span className="card-title activator grey-text text-darken-4"><b>Email:</b> {info.email}</span>
      </div>
      <div className="card-reveal">
-       <span className="card-title grey-text text-darken-4">{info.profession}<i className="fa fa-times right"></i></span>
+     <span className="card-title activator grey-text text-darken-4"><b>Description</b></span>
        <p>{info.description}</p>
      </div>
    </div>
