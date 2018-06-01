@@ -9,8 +9,11 @@ export default class Navbar extends Component {
 
   logOut=(e)=>{
     e.preventDefault();
-    Meteor.logout();
-    FlowRouter.go('/login')
+    Meteor.logout(error => {
+      FlowRouter.go('/')
+    });
+    
+   
   }
 
   render() {

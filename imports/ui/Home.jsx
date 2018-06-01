@@ -140,7 +140,7 @@ export default class Home extends Component {
   <symbol id="r-text">
     <text text-anchor="middle"
             x="50%" y="50%" dy=".35em">
-     99 JOBS
+    99 JOBS
      </text>
   </symbol>
 
