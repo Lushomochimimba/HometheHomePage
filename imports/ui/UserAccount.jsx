@@ -58,7 +58,7 @@ export class UserAccount extends Component{
 
             <Navbar/>
 
-                <div className="row">
+                {/* <div className="row">
 
             <div className="center">
 
@@ -82,8 +82,31 @@ export class UserAccount extends Component{
 
             </div>
 
-            </div> 
-
+            </div>  */}
+                  <div className="row userprofile-row">      
+                <div class="user-profile">
+                    <img class="avatar" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF_erFD1SeUnxEpvFjzBCCDxLvf-wlh9ZuPMqi02qGnyyBtPWdE-3KoH3s" alt="Ash" />
+                    <div class="username">{info.name}</div>
+                <div class="bio">
+                    {info.profession}
+                    
+                </div>
+                    <div class="description">
+                    {info.description}
+                </div>
+                <ul class="data">
+                    <li>
+                    <span class="entypo-heart"> Likes</span>
+                    </li>
+                    <li>
+                    <span class="entypo-eye"> stars</span>
+                    </li>
+                    <li>
+                    <span class="entypo-user"> dislikes</span>
+                    </li>
+                </ul>
+                </div>
+                </div>
             </div>
 
             

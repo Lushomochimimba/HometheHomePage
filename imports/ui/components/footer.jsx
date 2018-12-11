@@ -28,16 +28,10 @@ export default class Footer extends Component {
         <hr/>
         <ul>
           <li>
-            <a href="#!" className="grey-text text-lighten-3"> Sithembinkhosi Siwo   <i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3">   Lushomo Chimimba  <i className="fa fa-github"></i></a>
           </li>
           <li>
-            <a href="#!" className="grey-text text-lighten-3"> Lushomo Chimimba   <i className="fa fa-github"></i></a>
-          </li>
-          <li>
-            <a href="#!" className="grey-text text-lighten-3">Joseph Yumba  <i className="fa fa-github"></i></a>
-          </li>
-          <li>
-            <a href="#!" className="grey-text text-lighten-3"> Perseverance  <i className="fa fa-github"></i></a>
+            <a href="#!" className="grey-text text-lighten-3"> Sithembinkhosi Siwo  <i className="fa fa-github"></i></a>
           </li>
         </ul>
       </div>

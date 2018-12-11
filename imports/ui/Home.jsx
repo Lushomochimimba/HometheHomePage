@@ -5,7 +5,7 @@ import {withTracker} from 'meteor/react-meteor-data';
 import Navbar from '/imports/ui/components/navbar.jsx';
 import Footer from '/imports/ui/components/footer.jsx';
 import initailize from './materialize.js'
-
+import { Session } from 'meteor/session';
 
 
 
@@ -36,9 +36,14 @@ export default class Home extends Component {
           <h3 id="Head-text">building client and service provider relationships</h3>
     <div className="row center-align">
             <div className="col m4  offset-m4 s12" id="buttons">  
-             <a className="waves-effect waves-light btn-large right-align" id="Head-Button1" href="/results">Hire</a>
+             <button className="waves-effect waves-light btn-large right-align" id="Head-Button1" onClick={
+             ()=>{route.go('/results')}
+           }>Hire</button>
            <br/>
-           <a className="waves-effect waves-light btn-large left-align" id="Head-Button2" href="/signup">Advertise your skills</a>
+           {/* <a  id="Head-Button2" href="/signup" >Advertise your skills</a> */}
+           <button className="waves-effect waves-light btn-large left-align" id="Head-Button2" onClick={
+             ()=>{route.go('/signup')}
+           }>Advertise your skills</button>
            </div>
       </div>       
         </div>

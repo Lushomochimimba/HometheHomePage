@@ -130,7 +130,9 @@ body{
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+p{
+  text-align: center
+}
 .materialboxe{
 
     border-radius: 100px;
@@ -237,17 +239,19 @@ h4{
 
   #login {
 
-    margin-left: 400px;
-    margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 450px;
     width: 500px;
     height: 450px;
-    background-color: rgba(1, 10, 38, 0.795);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
   }
 
-  
+  .login-row{
+    display: flex;
+    justify-content: center;
+    margin: 200px;
+  }
   #login-button{
 
     background-color: rgb(232, 51, 57);
@@ -267,7 +271,6 @@ h4{
 
     width: 300px !important ;
     margin: auto ;
-    color: rgb(255, 255, 255) !important ;
 
 }
 #login-heading{
@@ -310,7 +313,7 @@ h4{
 
     width: 300px !important ;
     margin: auto !important ;
-    color: rgb(255, 255, 255) !important ;
+    color:rgba(1, 10, 38, 0) !important ;
 
   }
   #gender-input{
@@ -375,4 +378,102 @@ h4{
 }
 #center{
   text-align: center
+}
+/* CSS design by @jofpin */
+@import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+
+.title-pen {
+  color: #333;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+}
+.title-pen span {
+  color: #55acee;
+}
+.userprofile-row{
+  display : flex;
+  justify-content: center;
+}
+.user-profile {
+	width: 25em; 
+  height: 210px;
+  background: #EEF4F2;
+  border-radius: .3em;
+  font-size: 18px;
+  box-sizing: initial;
+  margin: 200px;
+  font-size: 20px;
+}
+
+.user-profile  .username {
+  margin: auto;
+  margin-top: -4.40em;
+  margin-left: 5.80em;
+  color: #658585;
+  font-size: 1.53em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+}
+.user-profile  .bio {
+  margin: auto;
+  display: inline-block;
+  margin-left: 10.43em;
+  color: #e76043; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > .description {
+  margin: auto;
+  margin-top: 1.35em;
+  margin-right: 4.43em;
+  width: 14em;
+  color: #c0c5c5; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > img.avatar {
+	padding: .7em;
+  margin-left: .3em;
+  margin-top: .3em;
+  height: 6.23em;
+  width: 6.23em;
+  border-radius: 18em;
+}
+
+.user-profile ul.data {
+	margin: 2em auto;
+	height: 3.70em;
+  background: #4eb6b6;
+  text-align: center;
+  border-radius: 0 0 .3em .3em;
+}
+.user-profile li {
+	margin: 0 auto;
+  padding: 1.30em; 
+  width: 33.33334%;
+  display: table-cell;
+  text-align: center;
+}
+
+.user-profile span {
+	font-family: "varela round", sans-serif;
+	color: #e3eeee;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.user-profile span:hover {
+  color: #daebea;
+}
+footer{
+  background-image: linear-gradient(#3aa0bf,#010a26); 
+}
+i{
+  color: rgb(232, 51, 57);
 }

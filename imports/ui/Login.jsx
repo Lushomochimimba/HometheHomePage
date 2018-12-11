@@ -31,12 +31,9 @@ export default class Login extends Component{
           <div className="main">
              <Navbar/>
          
-         
+         <div className="row login-row">
       <div className="center" id="login">
        
-        <div className="icon-block">
-        <i class="fa fa-user-circle  fa-3x"></i>
-        </div>
         <h4 id="login-heading">login</h4>
         <br/>
        <form className="col s12" onSubmit = {this.logUserIn}>
@@ -61,6 +58,7 @@ export default class Login extends Component{
         login
         </button>
        </form>              
+     </div>
      </div>
     </div>
     
