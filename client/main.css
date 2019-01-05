@@ -281,6 +281,16 @@ h4{
 }
   /* sign up */
 
+  .sign-up-field{
+    display: flex;
+    flex-direction: column;
+    margin: 200px;
+    margin-left: 600px;
+    margin-right: 600px;
+    padding:100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
   #signUp {
 
     margin-left: 400px;
@@ -307,6 +317,12 @@ h4{
     color: rgb(255, 255, 255) ! important;
     width: 300px !important; 
     margin-right: 100px;
+
+  }
+  .SignUpButton{
+    margin: 50px;
+    background-color: rgb(232, 51, 57)!important;
+     color: rgb(255, 255, 255) ! important;
 
   }
   .signUp-input{

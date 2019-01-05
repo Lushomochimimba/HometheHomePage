@@ -4,7 +4,7 @@ import {withTracker} from 'meteor/react-meteor-data';
 import {Accounts} from 'meteor/accounts-base';
 import Navbar from '/imports/ui/components/navbar.jsx';
 import Infoz from '../api/UserInfo/collections.js';
-import {Row, Input} from 'react-materialize'
+import {Row, Input,Button} from 'react-materialize'
 
 
 
@@ -137,9 +137,14 @@ render(){
   return(
     <div className="main2">
     <Navbar/>
-      <div className="center"id="signUp">
-      <h4 id="signup-heading">Sign Up</h4>
+      {/* <div className="row"id="signUp">
+      
        <form className="col s12" onSubmit = {this.getUserData}>
+       <div className="row">
+       <div className=" col s4">
+        <h4 id="signup-heading">Sign Up</h4>
+       </div>
+       </div>
                  <div className="row">
                     <div className=" col s4">
                     </div>
@@ -237,12 +242,46 @@ render(){
  </div>
 </div>   
               <button type="Primary" className="btn btn-primary cnt" id="signup-button"><a href="/useraccount"></a>Sign Up</button>
-             </form>
+             </form> */}
              {/* <button type="Danger" className="btn btn-primary delete" onClick={e =>this.deleteAccount(e,Infoz._id)}>
 Delete Account 
 </button>                  */}
-           </div>
-           <center><p>Already have an account?<a href="/login">Sign In</a></p></center>
+           {/* </div> */}
+    <form onSubmit = {this.getUserData}>  
+        <div class="row">   
+          <Row className="sign-up-field col-6">
+            <Input s={6} label="Names" type="text" onChange={this.handleNameChange} className="validate"/>
+            <Input s={6} label="Email"  name="email" type="email" onChange={this.handleEmailChange} className="validate"/>
+            <Input  s={12} label="Creat password" name="password" type="password" className="validate"/>
+            <Input s={12} label="confirm password"  name="password2" type="password" className="validate"/>
+            <Input s={12} label="Phone Number" name="phonenumber" type="number" onChange={this.handlePhonenumberChange} className="validate" />
+            <Input s={12} type='select' label="Profession" name="profession" defaultValue='2' id="gender-input" onChange={this.handleProfessionChange}>
+
+            <option>Barber</option>
+            <option>Carpenter</option>
+            <option>Hair Dresser</option>
+            <option>Plumber</option>
+            <option>Gardeners</option>
+            <option>Electrician</option>
+            <option>Maid</option>
+            <option>Mechanics</option>
+            <option>Brick Layers</option>
+
+          </Input>
+          <Input s={6} label="Location" name="location" type="text" onChange={this.handleLocationChange} className="validate"/>
+          <Input s={6} label="Bio" type="textarea" name="description" className="materialize-textarea" onChange={this.handleDesriptionChange}/>
+          <Input s={12} type='select' label="Gender" defaultValue='2' id="gender-input" name="gender" onChange={this.handleGenderChange}>
+            <option >male</option>
+            <option >female</option>
+          </Input>
+          <Button s={6} waves='light' href='/useraccount' className="SignUpButton">Create Account</Button>
+          {/* <button type="Primary" className="btn btn-primary cnt" id="signup-button"><a href="/useraccount"></a>Create Account</button> */}
+        </Row>
+        </div>
+  </form>
+      
+     <div style={{display:'flex', justifyContent:'center'}}><p>Already have an account?<a href="/login">Sign In</a></p></div>
+        
           </div>
         )
     }
