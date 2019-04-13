@@ -24,7 +24,9 @@ export default class Home extends Component {
     return (
 <div>
 
-{/* navigation bar */}
+{/*=====================================
+ navigation bar 
+ =======================================*/}
   <Navbar/>
 
 {/* head content */}

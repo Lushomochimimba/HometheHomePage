@@ -3,8 +3,9 @@ import route from '/imports/routing/router.js';
 import {withTracker} from 'meteor/react-meteor-data';
 import {Accounts} from 'meteor/accounts-base';
 import Navbar from '/imports/ui/components/navbar.jsx';
-import Infoz from '../api/UserInfo/collections.js';
-import {Row, Input,Button} from 'react-materialize'
+import Infoz from '/imports/api/UserInfo/collections';
+import {Categories}  from '/imports/api/UserInfo/collections';
+import {Row, Input,Button} from 'react-materialize';
 
 
 
@@ -78,6 +79,11 @@ getUserData=(e)=>{
           gender: this.state.gender,
           // createdBy:currentUserId,
       }
+  const category = {
+
+    profession : this.state.profession,
+
+  }
       Meteor.call('infoz.create',info,(err,res)=>{
         console.log(res)
         if(res){
@@ -87,6 +93,16 @@ getUserData=(e)=>{
           
         }else{
           console.log('failed to insert data in info')
+        }
+
+      });
+
+      Meteor.call('Categories.create',category,(err,catRes)=>{
+        console.log(catRes)
+        if(catRes){
+         return catRes
+        }else{
+          console.log('failed to insert data in categories')
         }
 
       });
@@ -289,8 +305,10 @@ Delete Account
 export default withTracker(() => {
   Meteor.subscribe('infoz');
   Meteor.subscribe('users');
+  Meteor.subscribe('categories');
   
    return {
-       infoz : Infoz.find().fetch(),      
+       infoz : Infoz.find().fetch(),   
+       categories : Categories.find().fetch(),
    };
 })(SignUp);

@@ -16,9 +16,9 @@ Meteor.methods({
 
 Meteor.methods({
   'categories.create':(category)=>{
-   const res = Categories.insert(category);
-   console.log(res);
-   return res;
+   const catRes = Categories.insert(category);
+   console.log(catRes);
+   return catRes;
   }
 });
 

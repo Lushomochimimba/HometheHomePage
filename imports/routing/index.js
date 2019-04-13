@@ -3,7 +3,7 @@ import Home from '/imports/ui/Home.jsx';
 import UserAccount from '/imports/ui/UserAccount.jsx';
 import Login from '/imports/ui/Login.jsx';
 import SignUp from '/imports/ui/SignUp.jsx';
-import Results from '/imports/ui/Results.jsx';
+import Results from '/imports/ui/Results';
 import Cards from '/imports/ui/Cards.jsx';
 
 

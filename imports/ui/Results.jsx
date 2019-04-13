@@ -4,7 +4,7 @@ import route from '/imports/routing/router.js';
 
 import {withTracker} from 'meteor/react-meteor-data';
 
-import {Categories} from '../api/UserInfo/collections.js';
+import Categories from '../api/UserInfo/collections.js';
 
 // import {Accounts} from 'meteor/accounts-base';
 
@@ -180,22 +180,13 @@ export class Results extends Component{
 
 export default withTracker(() => {
 
-  Meteor.subscribe('categories');
-
-  Meteor.subscribe('infoz');
-
-  Meteor.subscribe('users');
-
-  
-
-  
-
-  const dReady =  Meteor.subscribe('categories');
+      Meteor.subscribe('categories');
+      Meteor.subscribe('infoz');
+      Meteor.subscribe('users');
+      const dReady =  Meteor.subscribe('categories');
 
    return {
-
     categories : Categories.find({}).fetch(),
-
     dataReady: dReady.ready(),
 
    };
