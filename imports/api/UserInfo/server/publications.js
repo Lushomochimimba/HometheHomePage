@@ -10,6 +10,7 @@ Meteor.publish('infoz',()=>{
 });
 Meteor.publish('categories',()=>{
     return Categories.find({});
+
 });
 
 Meteor.publish('demo',()=>{

@@ -7,13 +7,6 @@ import Infoz from '/imports/api/UserInfo/collections';
 import {Categories}  from '/imports/api/UserInfo/collections';
 import {Row, Input,Button} from 'react-materialize';
 
-
-
-
-
-
-
-
 export class SignUp extends Component{
 constructor(props){
   super(props);
@@ -69,6 +62,7 @@ getUserData=(e)=>{
       error ? console.log(error.reason) : console.log('Account has been successful');
   })
   const currentUserId = Meteor.userId();
+
   const info  = {
           name: this.state.name,
           profession : this.state.profession,
@@ -90,17 +84,17 @@ getUserData=(e)=>{
           const email = Meteor.user().emails[0].address
           route.go('/useraccount?email='+email)
           // route.go('/cards?email='+email)
-          
+          console.log("successfully inserted data in Infoz")
         }else{
           console.log('failed to insert data in info')
         }
 
       });
 
-      Meteor.call('Categories.create',category,(err,catRes)=>{
+      Meteor.call('categories.create',category,(err,catRes)=>{
         console.log(catRes)
         if(catRes){
-         return catRes
+         console.log("successfully inserted data in categories")
         }else{
           console.log('failed to insert data in categories')
         }

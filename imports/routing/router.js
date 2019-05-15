@@ -5,7 +5,7 @@ import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import route from './router.js';
 import { Router, Route, Switch } from 'react-router-dom';
-import Home from '/imports/ui/Home.jsx'
+import Home2 from '../ui/Home2.o.jsx'
 export default createRouter(App);
 
 const history = createBrowserHistory();
@@ -44,13 +44,13 @@ export const routes = (
 
         <Switch>
 
-          <Route exact path='/' component= {Home} onEnter={publicPage}/>
+          <Route exact path='/' component= {Home2} onEnter={publicPage}/>
 
        {/* <Route exact path='/upload' component={Uploads} onEnter={privatePage}/> */}
 
           <Route exact path='/useraccount' render={ () => <Home greet='User'/> } onEnter={privatePage} />
 
-          <Route component={Home}/>
+          <Route component={Home2}/>
 
         </Switch>
 

@@ -1,0 +1,72 @@
+$base-color: #334242;
+$degrees: 5deg;
+
+.main {
+  section {
+    margin: 0;
+    height: 100vh;
+
+    @for $i from 1 to 6 {
+      &:nth-child(#{$i}) {
+        background-color: lighten($base-color, $degrees*$i);
+      }
+    }
+
+    h1 {
+      font-size: 38px;
+      color: #fff;
+      margin: 0;
+      padding: 50px 0 20px;
+      text-align: center;
+    }
+  }
+}
+
+#pagination {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  list-style: none;
+
+  li {
+    position: relative;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    transition: all .2s ease;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  a {
+    position: absolute;
+    text-decoration: none;  
+    left: 0;
+    top: 0;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+
+  @for $i from 1 to 6 {
+    &.page-#{$i} {
+      #pagination li:nth-of-type(#{$i}) {
+        @extend %active-dot;
+      }
+    }
+  }
+}
+
+%active-dot {
+  transform: scale(2);
+}

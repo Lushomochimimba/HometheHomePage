@@ -37,6 +37,7 @@ export class Results extends Component{
       const key = e.target.id
 
       console.log(key);
+      console.log("the above should be the key")
 
       
 
